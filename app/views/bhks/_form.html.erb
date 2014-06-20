@@ -1,0 +1,15 @@
+
+<%= simple_form_for @bhk do |f| %>
+  <%= f.input :name %>
+  <%= f.input :hall_size %>
+  <%= f.input :bed_size %>
+  <%= f.input :info ,:collection => ["HK","BHK","2BHK","3BHK" ]%>
+  <%= f.input :kitchen_size %>
+  <%= f.input :floor, :collection => ["Ground","First","Second","Third","Fourth"] %>
+  <%= f.input :sold_out %>
+  <%= f.association :project, :include_blank => false %>
+  <%= f.input :status %>
+    <%= f.button :submit, :class => 'btn-primary' %>
+    
+<% end %>
+

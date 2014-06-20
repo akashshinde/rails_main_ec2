@@ -1,0 +1,45 @@
+<%= form_for(@bbhk) do |f| %>
+  <% if @bbhk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bbhk.errors.count, "error") %> prohibited this bbhk from being saved:</h2>
+
+      <ul>
+      <% @bbhk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hall_size %><br>
+    <%= f.text_field :hall_size %>
+  </div>
+  <div class="field">
+    <%= f.label :bed1_size %><br>
+    <%= f.text_field :bed1_size %>
+  </div>
+  <div class="field">
+    <%= f.label :bed2_size %><br>
+    <%= f.text_field :bed2_size %>
+  </div>
+  <div class="field">
+    <%= f.label :kitchen_size %><br>
+    <%= f.text_field :kitchen_size %>
+  </div>
+  <div class="field">
+    <%= f.label :floor %><br>
+    <%= f.text_field :floor %>
+  </div>
+  <div class="field">
+    <%= f.label :sold_out %><br>
+    <%= f.check_box :sold_out %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

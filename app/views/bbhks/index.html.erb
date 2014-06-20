@@ -1,0 +1,39 @@
+<h1>Listing bbhks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hall size</th>
+      <th>Bed1 size</th>
+      <th>Bed2 size</th>
+      <th>Kitchen size</th>
+      <th>Floor</th>
+      <th>Sold out</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bbhks.each do |bbhk| %>
+      <tr>
+        <td><%= bbhk.hall_size %></td>
+        <td><%= bbhk.bed1_size %></td>
+        <td><%= bbhk.bed2_size %></td>
+        <td><%= bbhk.kitchen_size %></td>
+        <td><%= bbhk.floor %></td>
+        <td><%= bbhk.sold_out %></td>
+        <td><%= bbhk.status %></td>
+        <td><%= link_to 'Show', bbhk %></td>
+        <td><%= link_to 'Edit', edit_bbhk_path(bbhk) %></td>
+        <td><%= link_to 'Destroy', bbhk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bbhk', new_bbhk_path %>

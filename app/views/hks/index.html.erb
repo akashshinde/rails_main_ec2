@@ -1,0 +1,35 @@
+<h1>Listing hks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hall size</th>
+      <th>Kitchen size</th>
+      <th>Floor</th>
+      <th>Sold out</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hks.each do |hk| %>
+      <tr>
+        <td><%= hk.hall_size %></td>
+        <td><%= hk.kitchen_size %></td>
+        <td><%= hk.floor %></td>
+        <td><%= hk.sold_out %></td>
+        <td><%= hk.status %></td>
+        <td><%= link_to 'Show', hk %></td>
+        <td><%= link_to 'Edit', edit_hk_path(hk) %></td>
+        <td><%= link_to 'Destroy', hk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hk', new_hk_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hall_size: MyString
+  kitchen_size: MyString
+  floor: MyString
+  sold_out: false
+  status: MyString
+
+two:
+  hall_size: MyString
+  kitchen_size: MyString
+  floor: MyString
+  sold_out: false
+  status: MyString

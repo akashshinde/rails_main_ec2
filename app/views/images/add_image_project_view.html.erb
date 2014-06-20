@@ -1,0 +1,8 @@
+			<% @images = PImage.new %>
+		
+			<%= simple_form_for @images, :url => images_add_image_project_path, :method => 'post' do |f|%>
+						<%= f.input :photo %>
+						<%= f.input :details %>
+						<%= f.association :project %>
+		 	<%= f.button :submit ,"Add"%></li>
+			<% end %>

@@ -1,0 +1,2 @@
+module BbhKsHelper
+end

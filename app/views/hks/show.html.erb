@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hall size:</strong>
+  <%= @hk.hall_size %>
+</p>
+
+<p>
+  <strong>Kitchen size:</strong>
+  <%= @hk.kitchen_size %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @hk.floor %>
+</p>
+
+<p>
+  <strong>Sold out:</strong>
+  <%= @hk.sold_out %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @hk.status %>
+</p>
+
+<%= link_to 'Edit', edit_hk_path(@hk) %> |
+<%= link_to 'Back', hks_path %>

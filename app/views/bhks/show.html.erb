@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hall size:</strong>
+  <%= @bhk.hall_size %>
+</p>
+
+<p>
+  <strong>Bed size:</strong>
+  <%= @bhk.bed_size %>
+</p>
+
+<p>
+  <strong>Kitchen size:</strong>
+  <%= @bhk.kitchen_size %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @bhk.floor %>
+</p>
+
+<p>
+  <strong>Sold out:</strong>
+  <%= @bhk.sold_out %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bhk.status %>
+</p>
+
+<%= link_to 'Edit', edit_bhk_path(@bhk) %> |
+<%= link_to 'Back', bhks_path %>

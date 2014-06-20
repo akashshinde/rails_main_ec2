@@ -1,0 +1,7 @@
+			<% @images = Images.new %>
+		
+			<%= simple_form_for @images, :url => images_add_image_path, :method => 'post' do |f|%>
+						<%= f.input :photo %>
+						<%= f.association :bhk %>
+		 	<%= f.button :submit ,"Add"%></li>
+			<% end %>
