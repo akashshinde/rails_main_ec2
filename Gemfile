@@ -30,8 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
 gem "paperclip", "~> 4.1"
 group :development do
-  gem 'taps'
-  gem 'rvm'
+  gem 'pg'
 end
 
 
