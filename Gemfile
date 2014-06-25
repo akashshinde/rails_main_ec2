@@ -29,8 +29,10 @@ gem 'binding_of_caller'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
 gem "paperclip", "~> 4.1"
+group :development do
+  gem 'pg'
+end
 
-gem 'sqlite3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
