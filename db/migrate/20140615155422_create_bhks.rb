@@ -8,6 +8,7 @@ class CreateBhks < ActiveRecord::Migration
       t.boolean :sold_out
       t.string :status
       t.belongs_to :project
+      
       t.timestamps
     end
   end
