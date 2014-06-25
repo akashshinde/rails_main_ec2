@@ -69,6 +69,6 @@ class BhksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bhk_params
-      params.require(:bhk).permit(:hall_size, :bed_size, :kitchen_size, :floor, :sold_out, :status,:info,:name,:project_id,:salable_area)
+      params.require(:bhk).permit(:hall_size, :bed_size, :kitchen_size, :floor, :sold_out, :status,:info,:name,:project_id,:salable_area,:details)
     end
 end
