@@ -1,5 +1,6 @@
 Mauli::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   post "images/add_image"
     post "images/add_image_project"
 

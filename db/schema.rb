@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620134149) do
+ActiveRecord::Schema.define(version: 20140625033130) do
 
   create_table "bbhks", force: true do |t|
     t.string   "hall_size"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 20140620134149) do
     t.boolean  "sold_out"
     t.string   "status"
     t.integer  "project_id"
-    t.string   "bathroom_size"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
     t.string   "info"
     t.text     "details"
+    t.string   "salable_area"
   end
 
   create_table "floors", force: true do |t|
