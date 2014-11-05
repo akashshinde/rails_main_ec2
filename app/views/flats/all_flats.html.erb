@@ -1,2 +1,46 @@
-<h1>Flats#all_flats</h1>
-<p>Find me in app/views/flats/all_flats.html.erb</p>
+<h1>Listing bhks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hall size</th>
+      <th>Bed size</th>
+      <th>Kitchen size</th>
+      <th>Size</th>
+      <th>Floor</th>
+      <th>Sold out</th>
+
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Transaction</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flats.each do |bhk| %>
+      <tr>
+        <td><%= bhk.hall_size %></td>
+        <td><%= bhk.kitchen_size %></td>
+        <td><%= bhk.floor %></td>
+        <td><%= bhk.sold_out %></td>
+        <td><%= bhk.status %></td>
+        <td><%= link_to 'Show', bhk %></td>
+        <td><%= link_to 'Edit', edit_bhk_path(bhk) %></td>
+        <td><%= link_to 'Destroy', bhk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td></td>
+        <td></td>
+        <% if bhk.sold_out %>
+        <td><%= link_to 'Make Transaction', add_user_do_transaction_path(:id=> bhk.id) %></td>
+        <% else %>
+        <td><%= link_to 'Sell', add_user_add_buyer_path(:id=> bhk.id) %></td>
+        <% end -%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bhk', new_bhk_path %>

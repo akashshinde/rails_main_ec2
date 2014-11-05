@@ -1,0 +1,9 @@
+
+<%= simple_form_for(@buyer,:url => add_user_add_user_db_path) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :mobile_no %>
+  <%= f.hidden_field :flat_id, :value => @id %>
+  <%= f.button :submit, :class => 'btn-primary' %>
+<% end %>
+

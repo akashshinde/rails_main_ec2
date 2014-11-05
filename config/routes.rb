@@ -1,16 +1,22 @@
 Mauli::Application.routes.draw do
 
+  get "add_user/do_transaction"
+  get "add_user/delete_transaction"
+  get "add_user/add_buyer"
+  post "add_user/add_user_db"
+  get "add_user/main_amount"
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   post "images/add_image"
-    post "images/add_image_project"
+  post "images/add_image_project"
 
-get "images/add_image_project_view"
+  get "images/add_image_project_view"
 
   get "images/add"
   get "flats/all_flats"
 
-get "flats/all_images"
-get "flats/all_images_project"
+  get "flats/all_images"
+  get "flats/all_images_project"
     
 
   resources :hks

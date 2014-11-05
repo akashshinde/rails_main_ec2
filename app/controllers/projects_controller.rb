@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action  only: [:show, :edit, :update, :destroy]
+  #before_action  only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @id = params[:id]
   end
 
   # GET /projects/new
@@ -28,6 +29,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render action: 'show', status: :created, location: @project }
       else
@@ -70,6 +72,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :address, :no_of_flats,:details)
+      params.require(:project).permit(:name, :address, :no_of_flats,:details,:id)
     end
 end

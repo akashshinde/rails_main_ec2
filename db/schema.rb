@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625033130) do
+ActiveRecord::Schema.define(version: 20141105114825) do
 
   create_table "bbhks", force: true do |t|
     t.string   "hall_size"
@@ -23,22 +23,19 @@ ActiveRecord::Schema.define(version: 20140625033130) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sold_amount"
   end
 
-  create_table "bhks", force: true do |t|
-    t.string   "hall_size"
-    t.string   "bed_size"
-    t.string   "kitchen_size"
-    t.string   "floor"
-    t.boolean  "sold_out"
-    t.string   "status"
-    t.integer  "project_id"
+# Could not dump table "bhks" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "buyers", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "mobile_no"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "info"
-    t.text     "details"
-    t.string   "salable_area"
+    t.integer  "flat_id"
   end
 
   create_table "floors", force: true do |t|
@@ -47,17 +44,8 @@ ActiveRecord::Schema.define(version: 20140625033130) do
     t.datetime "updated_at"
   end
 
-  create_table "hks", force: true do |t|
-    t.string   "hall_size"
-    t.string   "kitchen_size"
-    t.string   "floor"
-    t.boolean  "sold_out"
-    t.string   "status"
-    t.integer  "project_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-  end
+# Could not dump table "hks" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "images", force: true do |t|
     t.datetime "created_at"

@@ -69,6 +69,6 @@ class HksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hk_params
-      params.require(:hk).permit(:hall_size, :kitchen_size, :floor, :sold_out, :status)
+      params.require(:hk).permit(:hall_size, :kitchen_size, :floor, :sold_out, :status,:project_id)
     end
 end

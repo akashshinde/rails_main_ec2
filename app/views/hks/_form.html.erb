@@ -1,41 +1,15 @@
-<%= form_for(@hk) do |f| %>
-  <% if @hk.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@hk.errors.count, "error") %> prohibited this hk from being saved:</h2>
 
-      <ul>
-      <% @hk.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :hall_size %><br>
-    <%= f.text_field :hall_size %>
-  </div>
-  <div class="field">
-    <%= f.label :kitchen_size %><br>
-    <%= f.text_field :kitchen_size %>
-  </div>
-  <div class="field">
-    <%= f.label :floor %><br>
-    <%= f.text_field :floor %>
-  </div>
-  <div class="field">
-    <%= f.label :sold_out %><br>
-    <%= f.check_box :sold_out %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for @hk do |f| %>
+  <%= f.input :name %>
+  <%= f.input :hall_size %>
+  <%= f.input :kitchen_size %>
+  <%= f.input :floor, :collection => ["Ground","First","Second","Third","Fourth"] %>
+  <%= f.input :sold_out %>
+  <%= f.association :project, :include_blank => false %>
+  <%= f.input :status %>
+  <%= f.button :submit, :class => 'btn-primary' %>
+    
 <% end %>
+
+
+

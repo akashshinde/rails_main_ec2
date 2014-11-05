@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+  <% @project = Project.find_by_id(@id) %>
 <p>
   <strong>Name:</strong>
-  <%= @project.name %>
+  <%=  @project.name %>
 </p>
 
 <p>

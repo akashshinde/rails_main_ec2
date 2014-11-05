@@ -15,7 +15,7 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.name %></td>
+        <td><%= link_to project.name ,flats_all_flats_path(:id=>project.id)%></td>
         <td><%= project.address %></td>
         <td><%= project.no_of_flats %></td>
         <td><%= link_to 'Show', project %></td>
