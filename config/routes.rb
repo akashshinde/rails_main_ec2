@@ -1,10 +1,16 @@
 Mauli::Application.routes.draw do
 
+  get "transactions/add_total_amount"
+  post "transactions/add_amount"
+  resources :transactions 
+
+  get "transactions/new" 
   get "add_user/do_transaction"
   get "add_user/delete_transaction"
   get "add_user/add_buyer"
   post "add_user/add_user_db"
   get "add_user/main_amount"
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   post "images/add_image"
@@ -24,6 +30,8 @@ Mauli::Application.routes.draw do
   resources :floors
 
   resources :bbhks
+
+  resources :flats
 
   resources :bhks
 

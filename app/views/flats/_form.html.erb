@@ -2,7 +2,8 @@
 <%= simple_form_for @flat do |f| %>
   <%= f.input :name %>
   <%= f.input :hall_size %>
-  <%= f.input :bed_size %>
+  <%= f.input :bed1_size %>
+  <%= f.input :bed2_size %>
   <%= f.input :salable_area %>
   <%= f.input :details %>
   <%= f.input :info ,:collection => ["HK","BHK","2BHK","3BHK" ]%>

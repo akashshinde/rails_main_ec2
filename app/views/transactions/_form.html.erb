@@ -1,0 +1,11 @@
+
+<%= simple_form_for @transaction do |f| %>
+  <%= f.input :debit,:placeholder=>"Enter paid amount" %>
+  <%= f.input :method,:collection =>["Check","Cash"],:default=>"Cash" %>
+  <%= f.input :receipt_no,:placeholder=>"Please enter manual receipt no" %>
+  <%= f.input :check_no,:placeholder=>"If payment method is by Check" %>
+  <%= f.input :flat ,:as=> :hidden , :input_html=>{:value => params[:id]} %>
+  <%= f.input :flat_id ,:as=> :hidden , :input_html=>{:value => params[:id]} %>
+  <%= f.button :submit, :class => 'btn-primary' %>
+<% end %>
+

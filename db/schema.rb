@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105114825) do
+ActiveRecord::Schema.define(version: 20141110175058) do
 
   create_table "bbhks", force: true do |t|
     t.string   "hall_size"
@@ -29,14 +29,11 @@ ActiveRecord::Schema.define(version: 20141105114825) do
 # Could not dump table "bhks" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
-  create_table "buyers", force: true do |t|
-    t.string   "name"
-    t.text     "address"
-    t.integer  "mobile_no"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "flat_id"
-  end
+# Could not dump table "buyers" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+# Could not dump table "flats" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "floors", force: true do |t|
     t.string   "floor"
@@ -84,5 +81,8 @@ ActiveRecord::Schema.define(version: 20141105114825) do
     t.string   "floor_size"
     t.text     "details"
   end
+
+# Could not dump table "transactions" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

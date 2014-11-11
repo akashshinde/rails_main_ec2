@@ -1,0 +1,7 @@
+
+<%= simple_form_for(@flat_details,:url=>transactions_add_amount_path) do |f| %>
+  <%= f.input :total_amount%>
+  <%= f.input :flat_id, :as=> :hidden , :input_html=>{:value=>params[:flat_id]} %>
+  <%= f.button :submit, :class => 'btn-primary' %>
+<% end %>
+

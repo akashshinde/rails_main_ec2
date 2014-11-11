@@ -1,5 +1,4 @@
 <h1>Listing bhks</h1>
-
 <table>
   <thead>
     <tr>
@@ -9,7 +8,6 @@
       <th>Size</th>
       <th>Floor</th>
       <th>Sold out</th>
-
       <th>Status</th>
       <th></th>
       <th></th>
@@ -17,8 +15,8 @@
       <th>Transaction</th>
     </tr>
   </thead>
-
   <tbody>
+  <% unless @flats.nil? %>
     <% @flats.each do |bhk| %>
       <tr>
         <td><%= bhk.hall_size %></td>
@@ -27,20 +25,21 @@
         <td><%= bhk.sold_out %></td>
         <td><%= bhk.status %></td>
         <td><%= link_to 'Show', bhk %></td>
-        <td><%= link_to 'Edit', edit_bhk_path(bhk) %></td>
+        <td><%= link_to 'Edit', edit_flat_path(bhk) %></td>
         <td><%= link_to 'Destroy', bhk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td></td>
         <td></td>
         <% if bhk.sold_out %>
-        <td><%= link_to 'Make Transaction', add_user_do_transaction_path(:id=> bhk.id) %></td>
+        <td><%= link_to 'Make Transaction', new_transaction_path(:id=> bhk.id,:balance_amount => bhk.balance_amount) %></td>
         <% else %>
-        <td><%= link_to 'Sell', add_user_add_buyer_path(:id=> bhk.id) %></td>
+        <td><%= link_to 'Sell', new_transaction_path(:id=> bhk.id,:balance_amount=> bhk.balance_amount) %></td>
         <% end -%>
       </tr>
     <% end %>
   </tbody>
+   <% end -%>
 </table>
 
 <br>
 
-<%= link_to 'New Bhk', new_bhk_path %>
+<%= link_to 'New Flat', new_flat_path %>

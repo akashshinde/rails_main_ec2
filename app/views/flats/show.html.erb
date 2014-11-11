@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hall size:</strong>
+  <%= @flat.hall_size %>
+</p>
+
+<p>
+  <strong>Bed size:</strong>
+  <%= @flat.bed1_size %>
+</p>
+
+<p>
+  <strong>Kitchen size:</strong>
+  <%= @flat.kitchen_size %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @flat.floor %>
+</p>
+
+<p>
+  <strong>Sold out:</strong>
+  <%= @flat.sold_out %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @flat.status %>
+</p>
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>

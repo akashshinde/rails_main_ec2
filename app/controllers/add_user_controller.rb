@@ -20,7 +20,7 @@ class AddUserController < ApplicationController
   		if @buyer.save
   			@flat.buyer_id = @buyer.id
   			@flat.save
-  			redirect_to add_user_do_transaction_path
+  			redirect_to transactions_add_total_amount_path(:flat_id => @flat_id)
   		end
  
   end	
