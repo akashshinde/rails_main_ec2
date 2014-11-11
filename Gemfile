@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem 'sqlite3'
+#gem 'sqlite3'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -33,8 +33,12 @@ gem 'binding_of_caller'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
 gem "paperclip", "~> 4.1"
-group :development do
+group :production do
   gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 

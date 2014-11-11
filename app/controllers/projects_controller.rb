@@ -5,12 +5,13 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
-  end
+      end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
     @id = params[:id]
+
   end
 
   # GET /projects/new
