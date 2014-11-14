@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -28,7 +28,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'better_errors'
-gem 'binding_of_caller'
+#gem 'binding_of_caller'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
@@ -58,3 +58,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'rubber'
+gem 'open4'
